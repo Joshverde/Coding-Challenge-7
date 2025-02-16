@@ -15,3 +15,19 @@ function calculateHourlyWage(salary,hoursPerWeek){ // creates the function and p
 console.log("**Task 2**"); // for ease of readabillity in the console
 calculateHourlyWage(52000,40); // calls the function
 calculateHourlyWage(75000,35); // calls the function
+
+//Task 3 - Customer Loyalty Discount
+let calculateLoyaltyDiscount = (amount, years) => {  // creates an arrow function with two parameters 
+    let loyaltyDiscount; // declares the fucntion 
+    if (years >= 5)
+        loyaltyDiscount = (amount - (amount * .15)); // calculation used if year is >= 5
+    else if (years >= 3)
+        loyaltyDiscount = (amount - (amount * .10)); //calculation used if year is >= 3
+    else
+        loyaltyDiscount = (amount - (amount * .05)); // calculation used if year is > 3
+    
+    console.log(`Discounted Price: $${loyaltyDiscount.toFixed(2)}`) // logs answer in console log with message
+};
+console.log("**Task 3**"); // for ease of readabillity in the console
+calculateLoyaltyDiscount(100,6); // calls the function
+calculateLoyaltyDiscount(200,2); // calls the function
