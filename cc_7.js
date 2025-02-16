@@ -46,3 +46,12 @@ function calculateShippingCost(weight,location,expedited = false){ // creates a 
 console.log("**Task 4**"); // for ease of readabillity in the console
 calculateShippingCost(10,"USA",true); // calls the function
 calculateShippingCost(5,"Canada",false); // calls the function
+
+// Task 5 - Business Loan Interest Calculation
+function calculateLoanInterest(principal,rate,years){ //creates a function with parameters
+    let interest = principal * rate * years;// calculates the interest based on the parameters
+    console.log(`Total Interest: $${interest.toFixed(2)}`);  //logs the result in the cosole
+};
+console.log("**Task 5**"); // for ease of readabillity in the console
+calculateLoanInterest(1000,.05,3); // calls the function
+calculateLoanInterest(5000,0.07,5); // calls the function
