@@ -55,3 +55,12 @@ function calculateLoanInterest(principal,rate,years){ //creates a function with 
 console.log("**Task 5**"); // for ease of readabillity in the console
 calculateLoanInterest(1000,.05,3); // calls the function
 calculateLoanInterest(5000,0.07,5); // calls the function
+
+// Task 6 - Filtering High-Value Transactions
+let transactions = [500, 1200, 3000, 800, 2200]; // creates an array of transactions 
+function FilterHighValueTransactions(transactions,filterFunction){  // creates a function with parameters
+    let expensiveOrders = transactions.filter(filterFunction) // filters array using the function given in the parameters
+     console.log(` Transactions over 1k: ${expensiveOrders}`) // logs expensiveOrders in the console
+};
+console.log("**task 6**") // for ease of readability in console
+FilterHighValueTransactions(transactions,amount => amount > 1000) //calls function
