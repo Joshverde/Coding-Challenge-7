@@ -64,3 +64,16 @@ function FilterHighValueTransactions(transactions,filterFunction){  // creates a
 };
 console.log("**task 6**") // for ease of readability in console
 FilterHighValueTransactions(transactions,amount => amount > 1000) //calls function
+
+//Task 7 - Budget Tracker
+function createBudgetTracker(){ // creates a function
+    let totalBudget = 0 // sets budget = to 0
+    return function  BudgetTracker(MoneySpent){  // creates a nested function
+        totalBudget += MoneySpent // caculates money spent 
+        console.log(`Current Balance:-${totalBudget}`); // logs current total to console
+    };
+};
+let budget = createBudgetTracker(); // assigns budget as = to the created tracker function
+console.log("**Task 7**"); // for ease of readability 
+budget(300); // calls fucntion
+budget(200); // calls function
