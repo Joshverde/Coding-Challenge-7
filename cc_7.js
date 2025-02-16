@@ -31,3 +31,18 @@ let calculateLoyaltyDiscount = (amount, years) => {  // creates an arrow functio
 console.log("**Task 3**"); // for ease of readabillity in the console
 calculateLoyaltyDiscount(100,6); // calls the function
 calculateLoyaltyDiscount(200,2); // calls the function
+
+// Task 4 - Product Shipping Cost Calculation
+function calculateShippingCost(weight,location,expedited = false){ // creates a function and parameters
+    let shippingCost = 0; // declares the fucntion as = to 0
+    if(location === "USA")
+        shippingCost = 5 + weight *.5; // calculation used if the location is USA
+    else if(location === "Canada")
+        shippingCost = 10 + weight *.7; //calculation used if location is Canada 
+    if (expedited)
+        shippingCost += 10;
+    console.log(`Shipping Cost: $${shippingCost.toFixed(2)}`)  // logs answer in console log with message
+};
+console.log("**Task 4**"); // for ease of readabillity in the console
+calculateShippingCost(10,"USA",true); // calls the function
+calculateShippingCost(5,"Canada",false); // calls the function
