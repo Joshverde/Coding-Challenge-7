@@ -65,7 +65,7 @@ function FilterHighValueTransactions(transactions,filterFunction){  // creates a
 console.log("**task 6**") // for ease of readability in console
 FilterHighValueTransactions(transactions,amount => amount > 1000) //calls function
 
-//Task 7 - Budget Tracker
+// Task 7 - Budget Tracker
 function createBudgetTracker(){ // creates a function
     let totalBudget = 0 // sets budget = to 0
     return function  BudgetTracker(MoneySpent){  // creates a nested function
@@ -77,3 +77,12 @@ let budget = createBudgetTracker(); // assigns budget as = to the created tracke
 console.log("**Task 7**"); // for ease of readability 
 budget(300); // calls fucntion
 budget(200); // calls function
+
+// Task 8 - Business Growth Projection
+function calculateGrowth(years,revenue){ // declares the function
+    if(years >=10)   return revenue.toFixed(2); // stops the function when years equal 10 and returns revenue ending the function
+    return  calculateGrowth(years +1,revenue *1.05) // uses recursion to call the function again, increading year by 1 and revenue by 5% 
+};
+console.log("**Task 8**") //for ease of readability 
+console.log(calculateGrowth(8, 1000)) // calls the function
+console.log(calculateGrowth(5, 5000)) // calls the function
